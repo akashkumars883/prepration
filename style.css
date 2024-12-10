@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+*::selection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html {
+  width: 100vw;
+} 
+
+#main {
+  width: 95%;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffffffe;
+  font-size: 16px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul li {
+  margin: 0;
+  font-weight: 500;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #b3b3b3;
+}
+
+#navbar button{
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: rgb(116, 123, 255);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  margin-right: 20px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+#navbar button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: none;
+  padding: 20px;
+}
+
+.content.active {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+#home h1 {
+  font-size: 190px;
+  font-weight: 1000;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px; /* adjust the height to your liking */
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animate-in {
+  animation: slide-in 0.5s ease-in-out 0.1s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.prev:hover, .next:hover {
+  color: #333;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+#search-container {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  width: 100%;
+  height: 55px;
+  max-width: 1400px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#courses{
+  border: none;
+  width: 500px;
+  height: 55px;
+  font-size: 20px;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+#stream{
+  border: none;
+  width: 500px;
+  height: 55px;
+  font-size: 20px;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+#search-container button {
+  width: 500px;
+  height: 55px;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+#search-container button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

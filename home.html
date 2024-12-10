@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Forum</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="#" data-target="home">Study <br />Nest.</a>
+          </li>
+          <li><a href="#" data-target="home">Home</a></li>
+          <li><a href="#" data-target="forum">Q&A Fourm</a></li>
+          <li><a href="#" data-target="login">Courses</a></li>
+          <li><a href="#" data-target="register">PYQs</a></li>
+          <button id="btn">Register</button>
+        </ul>
+      </nav>
+      <div id="main">
+        <!--Home-->
+        <div id="home" class="content active">
+          <div id="search-container">
+            <select id="courses">
+              <option value="courses">Select country</option>
+              <!-- Add more courses as needed -->
+              <option value="Lucknow">Lucknow</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Pune">Pune</option>
+            </select>
+            <select id="courses">
+              <option value="stream">Select course</option>
+              <!-- Add more stream as needed -->
+              <option value="Lucknow">Lucknow</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Pune">Pune</option>
+            </select>
+            <button>search</button>
+          </div>
+          <h1>The Smart Way to Learn</h1>
+          <div class="slider">
+            <div class="slides">
+              <div class="slide">
+                <img
+                  src="./assets/pexels-artempodrez-4492126.jpg"
+                  alt="Image 1"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/pexels-george-dolgikh-551816-1326947.jpg"
+                  alt="Image 2"
+                />
+              </div>
+              <div class="slide">
+                <img src="./assets/pexels-olly-3768126.jpg" alt="Image 3" />
+              </div>
+            </div>
+            <div class="controls">
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+            <div class="dots">
+              <button class="dot active"></button>
+              <button class="dot"></button>
+              <button class="dot"></button>
+            </div>
+          </div>
+          <div id="home-questions-list">
+            <h3></h3>
+            <!-- Questions will be loaded here -->
+          </div>
+        </div>
+
+        <div id="forum" class="content hidden">
+          <h2>Forum</h2>
+          <div id="post-question">
+            <h3>Post a Question</h3>
+            <form id="question-form">
+              <label for="question-title">Title:</label>
+              <input type="text" id="question-title" required />
+              <label for="question-body">Question:</label>
+              <textarea id="question-body" required></textarea>
+              <button type="submit">Post</button>
+            </form>
+          </div>
+          <div id="questions-list">
+            <h3>Questions</h3>
+            <!-- Questions will be loaded here -->
+          </div>
+        </div>
+
+        <div id="login" class="content hidden">
+          <h2>Login</h2>
+          <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required />
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <div id="register" class="content hidden">
+          <h2>Register</h2>
+          <form id="register-form">
+            <label for="register-name">Name:</label>
+            <input type="text" id="register-name" required />
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" required />
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" required />
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
